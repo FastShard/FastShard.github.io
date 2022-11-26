@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
+}
+
+:root {
+    --bg-color: #E5E5E5;
+    --second-bg-color: #E5E5E5;
+    --text-color: #212121;
+    --second-color: #245c57;
+    --main-color: #245c57;
+    --big-font: 2.9rem;
+    --h2-font: 4.2rem;
+    --p-font: 1.6rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 25px 15%;
+    transition-duration: .3s;
+}
+
+.logo {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    color: var(--main-color);
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    color: var(--main-color);
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    left: 0;
+    bottom: -4px;
+    transition: ease .40s;
+}
+
+.navbar a:hover::after {
+    width: 100%
+}
+
+#menu-icon {
+    font-size: 32px;
+    color: var(--main-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.h-btn {
+    padding: 0 20px;
+    height: 40px;
+    display: inline-block;
+    line-height: 42px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all .30s;
+}
+
+.h-btn:hover {
+    transform: translateY(-5px);
+}
+
+section {
+    padding: 120px 15%;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    /*     background: url('../img/background1.jpg'); */
+    /* background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp5187908.jpg&f=1&nofb=1&ipt=4f5c2d3d7dece94abb0eb71026f10aea253eed15275a8e09dddf0573260e9170&ipo=images'); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.home-text h1 {
+    margin: 20px 0px 20px;
+    font-size: var(--big-font);
+}
+
+.home-text h3 {
+    font-size: 25px;
+    margin-bottom: 55px;
+}
+
+.home-text h4 {
+    color: var(--main-color);
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+span {
+    color: var(--main-color)
+}
+
+header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--main-color);
+}
+
+header.sticky {
+    padding: 12px 15%;
+    background-color: var(--bg-color);
+    color: var(--second-bg-color);
+}
+
+header.sticky.logo {
+    padding: 12px 15%;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+
+header.logo {
+    color: var(--bg-color);
+}
+
+.sticky .navbar a::after {
+    background: var(--main-color);
+    color: var(--main-color);
+}
+
+.sticky .h-btn {
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+.about {
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.about-text p {
+    color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 28px;
+    max-width: 590px;
+    font-size: var(--p-font);
+    margin-bottom: 45px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 13px 30px;
+    border-radius: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 15 px;
+}
+
+.center p {
+    color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: var(--p-font);
+}
+
+@media (max-width: 1270px) {
+    header {
+        padding: 18px 4%;
+        transition: .2s;
+    }
+
+    header.sticky {
+        padding: 10px 4%;
+        transition: .2s;
+    }
+
+    section {
+        padding: 80px 4%;
+        transition: .2s;
+    }
+
+    .about {
+        background-color: var(--bg-color);
+        align-items: center;
+        justify-items: center;
+    }
+
+    .about-text {
+        align-items: center;
+        justify-items: center;
+    }
+
+    :root {
+        --big-font: 2.3rem;
+        --h2-font: 3.8rem;
+        --p-font: 1rem;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 990px) {
+    .home {
+        height: 100vh;
+    }
+
+    #menu-icon {
+        /* make the icon appear on the left; */
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: -700px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        transition: all .30s;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1.1rem;
+        margin: 1.3rem;
+        border-left: 2px solid var(--text-color);
+    }
+
+    .navbar a:hover {
+        background: var(--main-color);
+        color: var(--bg-color);
+    }
+
+    .navbar a::after {
+        display: none;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .h-btn {
+        display: block;
+    }
+
+    .about-img {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .about-img img {
+        max-width: 100%;
+        width: 700px;
+        height: auto;
+    }
+
+    .box img {
+        max-width: 100%;
+        width: 760px;
+        height: auto;
+    }
+}
